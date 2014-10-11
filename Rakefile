@@ -10,6 +10,12 @@ task :run do
   system("jekyll serve -w --drafts")
 end
 
+desc 'push changes to github'
+task :deploy do
+  system("git checkout gh-pages")
+  system("git push origin gh-pages:gh-pages")
+end
+
 desc 'create new post'
 task :post do
   title = (ENV["title"] || "New Post").split(" ").map(&:capitalize).join(" ")
