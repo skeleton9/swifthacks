@@ -11,6 +11,9 @@ Generally speaking, `Swift` is quite similar to `Python` or `Ruby`, but it keeps
 some `C` styles. It is more *strong typed*. If you are familiar with `Python` or
 `Ruby`, you can find many familiar features, like `Array`, `Dictionary`, `Tuple`.
 
+You can have a look at the [cheetsheet(pdf)](http://cdn2.raywenderlich.com/wp-content/uploads/2014/06/RW-Swift-Cheatsheet-0_3.pdf)
+to get a brief view of the Swift language.
+
 ### Types
 
 - Int, Float, Double
