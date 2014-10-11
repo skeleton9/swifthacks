@@ -5,6 +5,11 @@ $post_ext = "markdown"
 $post_dir = "_posts"
 $draft_dir = "_drafts"
 
+desc 'start jekyll server for local testing'
+task :run do
+  system("jekyll serve -w --drafts")
+end
+
 desc 'create new post'
 task :post do
   title = (ENV["title"] || "New Post").split(" ").map(&:capitalize).join(" ")

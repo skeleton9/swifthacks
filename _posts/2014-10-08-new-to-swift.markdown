@@ -46,7 +46,7 @@ highlighting.
 
 Create your file `hello.swift`:
 
-```
+```swift
 println("Hello World!")
 ```
 
