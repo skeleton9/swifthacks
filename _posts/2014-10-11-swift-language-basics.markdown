@@ -87,12 +87,13 @@ and looked up through a unique identifier (also known as a key).
 Tuples group multiple values into a single compound value. The values within a
 tuple can be of any type and do not have to be of the same type as each other.
 
-- Array
+- Array<ValueType> or [ValueType]
 
 ```swift
 // declare
 var empty = [Int]()
-var numbers: [Int] = [1, 2, 3]
+var numbers: [Int] = [1, 2, 3]  // preferred
+var numbers2: Array<Int> = [1, 2, 3]
 var cities = ["beijing", "shanghai", "tianjin", "chongqing"]
 
 // append item
@@ -101,8 +102,12 @@ cities.append("guangzhou")
 cities += ["shengzhen", "qingdao"]
 // access item by index
 println(cities[0])  // beijing
+// insert
+cities.insert("Xiamen", atIndex: 3)
 // remove item by index
 cities.removeAtIndex(2) // tianjin removed
+// count
+print cities.count
 
 // iterate array items
 for city in cities {
@@ -117,7 +122,7 @@ for (index, name) in enumerate(cities) {
 }
 ```
 
-- Dictionary<KeyType, ValueType>
+- Dictionary<KeyType, ValueType> or [KeyType, ValueType]
 
 ```swift
 var dict: [String, Int] = ["jack": 12, "bob": 14]
@@ -140,6 +145,12 @@ You can name the individual elements in a tuple when the tuple is defined:
 let http200Status = (statusCode: 200, description: "OK")
 var code = http200status.statusCode
 ```
+
+### Control Flow
+
+- For, For in
+- If, Else
+- Switch, Case
 
 ### Enum
 
