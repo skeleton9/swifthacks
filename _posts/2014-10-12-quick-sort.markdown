@@ -52,7 +52,7 @@ func quicksort<T: Comparable>(inout arr: [T], left: Int, right: Int) {
 	}
 }
 
-func swap<T: Comparable>(inout arr: [T], a: Int, b: Int) {
+func swap<T>(inout arr: [T], a: Int, b: Int) {
 	var temp = arr[a]
 	arr[a] = arr[b]
 	arr[b] = temp
