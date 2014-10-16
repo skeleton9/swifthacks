@@ -13,6 +13,7 @@ end
 desc 'build jekyll site and copy tags out'
 task :build do
   system("jekyll build")
+  system("jekyll rm -rf ./tags/*")
   system("cp _site/tags/* ./tags")
 end
 
@@ -21,7 +22,7 @@ task :commit do
   Rake::Task["build"].invoke
 
   message = ENV['m'] || 'commit changes'
-  system("git add .")
+  system("git add -A")
   system("git commit -m '#{message}'")
 end
 
