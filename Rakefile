@@ -22,7 +22,7 @@ task :commit do
 
   message = ENV['m'] || 'commit changes'
   system("git add .")
-  system("git commit -m #{message}")
+  system("git commit -m '#{message}'")
 end
 
 desc 'push changes to github'
