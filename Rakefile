@@ -10,8 +10,15 @@ task :run do
   system("jekyll serve -w --drafts")
 end
 
+desc 'build jekyll site and copy tags out'
+task :build do
+  system("jekyll build")
+  system("cp _site/tags/* ./tags")
+end
+
 desc 'push changes to github'
 task :deploy do
+  Rake::Task["build"].invoke
   system("git checkout gh-pages")
   system("git push origin gh-pages:gh-pages")
 end

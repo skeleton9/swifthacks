@@ -259,6 +259,12 @@
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: .25em;
+  a {
+    &,
+    &:visited {
+        color: #fff;
+    }
+  }
 }
 
 .label-primary {
@@ -266,5 +272,5 @@
 }
 
 .label-default {
-background-color: $grey-color;
+  background-color: $grey-color;
 }
