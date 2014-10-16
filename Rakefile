@@ -16,9 +16,18 @@ task :build do
   system("cp _site/tags/* ./tags")
 end
 
+desc 'commit all changes'
+task :commit do
+  Rake::Task["build"].invoke
+
+  message = ENV['m'] || 'commit changes'
+  system("git add .")
+  system("git commit -m #{message}")
+end
+
 desc 'push changes to github'
 task :deploy do
-  Rake::Task["build"].invoke
+  Rake::Task["commit"].invoke
   system("git checkout gh-pages")
   system("git push origin gh-pages:gh-pages")
 end
