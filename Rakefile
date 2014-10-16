@@ -18,17 +18,14 @@ task :build do
 end
 
 desc 'commit all changes'
-task :commit do
-  Rake::Task["build"].invoke
-
+task :commit => :build do
   message = ENV['m'] || 'commit changes'
   system("git add -A")
   system("git commit -m '#{message}'")
 end
 
 desc 'push changes to github'
-task :deploy do
-  Rake::Task["commit"].invoke
+task :deploy => :commit do
   system("git checkout gh-pages")
   system("git push origin gh-pages:gh-pages")
 end
