@@ -13,7 +13,7 @@ end
 desc 'build jekyll site and copy tags out'
 task :build do
   system("jekyll build")
-  system("jekyll rm -rf ./tags/*")
+  system("rm -rf ./tags/*")
   system("cp _site/tags/* ./tags")
 end
 
