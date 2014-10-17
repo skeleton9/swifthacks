@@ -10,7 +10,7 @@ layout: default
       {% if page.author %} | by {{ page.author }} {% endif %}
       {% if page.tags %}
         {% for tag in page.tags %}
-        <span class='label label-default'><a href='/tags/{{tag}}.html'>{{tag}}</a></span>
+        <span class='label'><a href='/tags/{{tag}}.html'>{{tag}}</a></span>
         {% endfor %}
       {% endif %}
     </p>

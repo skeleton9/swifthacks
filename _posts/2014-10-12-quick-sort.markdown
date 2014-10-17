@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Quick Sort"
-tags: [code]
+tags: [code, algorithm]
 ---
 
 Swift implementation of [quick-sort](http://en.wikipedia.org/wiki/Quicksort)

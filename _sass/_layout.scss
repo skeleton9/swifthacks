@@ -169,8 +169,20 @@
         width:         calc(100% - (#{$spacing-unit} / 2));
     }
 }
-
-
+/**
+* Home page
+*/
+.home {
+  width: 75%;
+  float: left;
+}
+.tag-list {
+  width: 25%;
+  float: left;
+  li {
+    list-style: none;
+  }
+}
 
 /**
  * Page content
@@ -251,10 +263,12 @@
 
 .label {
   display: inline;
+  margin-left: 4px;
   padding: .2em .6em .3em;
   font-size: 75%;
   line-height: 1;
-  color: #fff;
+  color: $grey-color;
+  background-color: #eef;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -262,15 +276,7 @@
   a {
     &,
     &:visited {
-        color: #fff;
+        color: $grey-color;
     }
   }
-}
-
-.label-primary {
-  background-color: #428bca;
-}
-
-.label-default {
-  background-color: $grey-color;
 }

@@ -1,0 +1,13 @@
+<div class='tag-list'>
+  <h3>Tags:</h3>
+  <ul>
+    {% for tag in site.tags %}
+      <li>
+        <label class="label"><a href='/tags/{{tag[0]}}.html'>{{ tag[0] }}</a></label>
+        <span class='post-meta'>
+          ({{ tag[1].size }})
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

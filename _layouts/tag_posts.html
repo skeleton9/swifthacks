@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="home">
-  <h2>Posts for tag <label class='label label-default'>{{ page.tag }}</label></h2>
+  <h2>{{ page.posts.size}} posts for tag <label class='label'>{{ page.tag }}</label></h2>
   <ul class="post-list">
     {% for post in page.posts %}
       <li>
