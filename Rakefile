@@ -5,17 +5,21 @@ $post_ext = "markdown"
 $post_dir = "_posts"
 $draft_dir = "_drafts"
 
-desc 'start jekyll server for local testing'
-task :run do
-  system("jekyll serve -w --drafts")
+
+task :clean do
+  system("rm -rf ./_site/*")
+  system("rm -rf ./tags/*")
 end
 
 desc 'build jekyll site and copy tags out'
-task :build do
-  system("rm -rf ./_site/*")
-  system("rm -rf ./tags/*")
+task :build => :clean do
   system("jekyll build")
   system("cp _site/tags/* ./tags")
+end
+
+desc 'start jekyll server for local testing'
+task :run => :build do
+  system("jekyll serve -w --drafts")
 end
 
 desc 'commit all changes'
