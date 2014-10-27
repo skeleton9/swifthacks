@@ -10,3 +10,4 @@ permalink: /resources/
 - xcode_6.1_gm_seed_2.dmg http://pan.baidu.com/s/1kTyvsAb
   It is very slow to download from Apple site. You need this version to run
   swift in command line.
+- [The Swift Programming Language 中文版](http://numbbbbb.gitbooks.io/-the-swift-programming-language-/)
